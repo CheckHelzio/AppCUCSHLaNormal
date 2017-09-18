@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aaa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorAccent"
+    android:visibility="visible">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimario"
+        android:elevation="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="?actionBarSize"
+        android:layout_centerHorizontal="true"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingLeft="56dp"
+        android:paddingRight="56dp"
+        android:text="@string/header"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/header2"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@+id/header"
+        android:background="?colorAccent"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/conte_buscar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"
+        android:elevation="9dp"
+        android:visibility="gone">
+
+        <AutoCompleteTextView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:gravity="center_vertical"
+            android:hint="Buscar evento"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:paddingLeft="54dp"
+            android:paddingRight="54dp"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/menu_buscar2"
+            android:layout_width="48dp"
+            android:layout_height="?actionBarSize"
+            android:layout_alignBottom="@+id/search_view"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/search_view"
+            android:padding="14dp"
+            android:src="@drawable/ic_find"
+            android:tint="#fff" />
+
+        <ImageView
+            android:id="@+id/menu_cerrar_buscar"
+            android:layout_width="48dp"
+            android:layout_height="?actionBarSize"
+            android:layout_alignBottom="@+id/search_view"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/search_view"
+            android:padding="14dp"
+            android:src="@drawable/ic_cancel"
+            android:tint="#fff" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/conte_mes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/conexion"
+        android:layout_below="@id/header2">
+
+        <include
+            layout="@layout/layout_mes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/proteccion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/conexion"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_alignParentBottom="true"
+        android:background="?colorPrimary"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:textColor="#FFF"
+        android:textSize="10sp" />
+
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.NavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nv"
+    android:layout_width="320dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="#fff"
+    app:headerLayout="@layout/drawer_header">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="188dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/filtro1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="checkAuditorios"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="14dp"
+                android:background="#00000000"
+                android:buttonTint="@color/ed_a"
+                android:checked="true"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:text="@string/auditorio_salvador"
+                android:textColor="@color/colorPrimario"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filtro2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="checkAuditorios"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="14dp"
+                android:background="#00000000"
+                android:buttonTint="@color/ed_b"
+                android:checked="true"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:text="@string/auditorio_silvano"
+                android:textColor="@color/colorPrimario"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filtro3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="checkAuditorios"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="14dp"
+                android:background="#00000000"
+                android:buttonTint="@color/ed_c"
+                android:checked="true"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:text="@string/auditorio_carlos"
+                android:textColor="@color/colorPrimario"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filtro4"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="checkAuditorios"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="14dp"
+                android:background="#00000000"
+                android:buttonTint="@color/ed_d"
+                android:checked="true"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:text="@string/auditorio_adalberto"
+                android:textColor="@color/colorPrimario"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filtro5"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="checkAuditorios"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="14dp"
+                android:background="#00000000"
+                android:buttonTint="@color/ed_e"
+                android:checked="true"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:text="@string/sala_de_juicios"
+                android:textColor="@color/colorPrimario"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.design.widget.NavigationView>

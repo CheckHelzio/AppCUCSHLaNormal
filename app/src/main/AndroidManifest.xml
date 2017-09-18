@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.check.agendacucshlanormal">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Logo"
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:theme="@style/AppTheme.TranslucentStatusBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Inicio"
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:theme="@style/AppTheme.TranslucentStatusBar"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".DialogListaEventosHelzio"
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:theme="@style/AppTheme.Translucent"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="EVENTOS_DIALOG" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".DialogInfoEventosHelzio"
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:theme="@style/AppTheme.Translucent"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name=".RegistrarEvento"
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:theme="@style/AppTheme.Translucent"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="INFO_EVENTOS_DIALOG" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".DialogAgregarFechas"
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:theme="@style/AppTheme.Translucent"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="DIALOG_AGREGAR_FECHAS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".DateDialogHelzio"
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:theme="@style/AppTheme.Translucent.DateDialog">
+            <intent-filter>
+                <action android:name="DATE_DIALOG" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".DialogResultadoBusqueda"
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:theme="@style/AppTheme.Translucent.DateDialog" />
+
+    </application>
+
+</manifest>
