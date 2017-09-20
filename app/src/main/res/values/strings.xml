@@ -82,7 +82,7 @@
     <string name="agregar_fecha">Agregar fecha</string>
     <string name="agregar">Agregar</string>
     <string name="problema_conexion">Hay un problema con la conexión a la base de datos. Verifica tu conexión a internet</string>
-    <string name="actualizando">Actualizando información, por favor espere...</string>
+    <string name="actualizando">Actualizando información, por favor espere…</string>
     <string name="no_hay_eventos">No hay eventos registrados este día.</string>
     <string name="no_hay_coincidencias">No hay eventos que coincidan con la busqueda realizada.</string>
 

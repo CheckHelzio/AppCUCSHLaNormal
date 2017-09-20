@@ -172,9 +172,6 @@ public class DialogInfoEventosHelzio extends AppCompatActivity implements Loader
             case "E":
                 statusEvento = "Editado";
                 break;
-            case "X":
-                statusEvento = "Eliminado";
-                break;
         }
         return statusEvento;
     }

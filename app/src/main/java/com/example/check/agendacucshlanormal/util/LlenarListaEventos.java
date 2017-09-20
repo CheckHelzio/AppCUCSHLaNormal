@@ -104,7 +104,7 @@ public class LlenarListaEventos extends AsyncTaskLoader<Object> {
                             Data.getFondoAuditorio(eventos_suelto.split("::")[4].trim(), getContext())
                     );
 
-                    if (!lista_eventos.contains(nuevo_evento)) {
+                    if (!eventos[Integer.parseInt(eventos_suelto.split("::")[0].trim().replaceAll("[^0-9]+", ""))].contains(eventos_suelto)) {
                         lista_eventos.add(nuevo_evento);
                         eventos[Integer.parseInt(eventos_suelto.split("::")[0].trim().replaceAll("[^0-9]+", ""))] += eventos_suelto + "¦";
                     }
