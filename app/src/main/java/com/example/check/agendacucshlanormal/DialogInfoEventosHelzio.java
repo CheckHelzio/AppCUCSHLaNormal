@@ -321,40 +321,36 @@ public class DialogInfoEventosHelzio extends AppCompatActivity implements Loader
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode) {
-            case EDITAR_EVENTO:
-                if (resultCode == RESULT_OK) {
-                    String s_fecha = evento.getFecha();
+        if (resultCode == RESULT_OK) {
+            String s_fecha = evento.getFecha();
 
-                    Log.d(TAG, "onActivityResult: EDITAR EVENTO - Result ok");
-                    ArrayList<Eventos> listaEventosNuevos = data.getParcelableArrayListExtra("LISTA");
-                    evento = listaEventosNuevos.get(0);
-                    tv_titulo.setText(evento.getTitulo());
-                    Log.d(TAG, "onActivityResult: " + evento.getTitulo());
-                    tv_auditorios.setText(nombreAuditorio(evento.getAuditorio()));
-                    tv_tipoActividad.setText(evento.getTipoEvento());
-                    tv_fecha.setText(fecha(evento.getFecha()));
-                    String hora = horasATetxto(Integer.parseInt(evento.getHoraInicial().replaceAll("[^0-9]+", ""))) + " - " + horasATetxto(Integer.parseInt(evento.getHoraFinal().replaceAll("[^0-9]+", "")));
-                    tv_horario.setText(hora);
-                    tv_organizador.setText(evento.getNombreOrganizador());
-                    tv_num_tel.setText(evento.getNumTelOrganizador().equals("") ? "Sin número telefónico" : evento.getNumTelOrganizador());
-                    tv_nota.setText(evento.getNotas());
-                    tv_id.setText(evento.getId());
-                    String marca_agua = status(evento.getStatusEvento()) + " por " + evento.getQuienR() + "  -  " + evento.getCuandoR().split("~")[0] + " a las " + evento.getCuandoR().split("~")[1];
-                    tv_marca_agua.setText(marca_agua);
-                    fondo.setBackgroundColor(evento.getFondo());
+            Log.d(TAG, "onActivityResult: EDITAR EVENTO - Result ok");
+            ArrayList<Eventos> listaEventosNuevos = data.getParcelableArrayListExtra("LISTA");
+            evento = listaEventosNuevos.get(0);
+            tv_titulo.setText(evento.getTitulo());
+            Log.d(TAG, "onActivityResult: " + evento.getTitulo());
+            tv_auditorios.setText(nombreAuditorio(evento.getAuditorio()));
+            tv_tipoActividad.setText(evento.getTipoEvento());
+            tv_fecha.setText(fecha(evento.getFecha()));
+            String hora = horasATetxto(Integer.parseInt(evento.getHoraInicial().replaceAll("[^0-9]+", ""))) + " - " + horasATetxto(Integer.parseInt(evento.getHoraFinal().replaceAll("[^0-9]+", "")));
+            tv_horario.setText(hora);
+            tv_organizador.setText(evento.getNombreOrganizador());
+            tv_num_tel.setText(evento.getNumTelOrganizador().equals("") ? "Sin número telefónico" : evento.getNumTelOrganizador());
+            tv_nota.setText(evento.getNotas());
+            tv_id.setText(evento.getId());
+            String marca_agua = status(evento.getStatusEvento()) + " por " + evento.getQuienR() + "  -  " + evento.getCuandoR().split("~")[0] + " a las " + evento.getCuandoR().split("~")[1];
+            tv_marca_agua.setText(marca_agua);
+            fondo.setBackgroundColor(evento.getFondo());
 
-                    ArrayList<Eventos> listaDeRetorno = new ArrayList<>();
-                    for (Eventos e : listaEventosNuevos) {
-                        if (e.getFecha().equals(s_fecha)) {
-                            listaDeRetorno.add(e);
-                        }
-                    }
-                    Intent i = getIntent();
-                    i.putParcelableArrayListExtra("LISTA", listaDeRetorno);
-                    setResult(RESULT_FIRST_USER, i);
+            ArrayList<Eventos> listaDeRetorno = new ArrayList<>();
+            for (Eventos e : listaEventosNuevos) {
+                if (e.getFecha().equals(s_fecha)) {
+                    listaDeRetorno.add(e);
                 }
-                break;
+            }
+            Intent i = getIntent();
+            i.putParcelableArrayListExtra("LISTA", listaDeRetorno);
+            setResult(RESULT_FIRST_USER, i);
         }
     }
 
